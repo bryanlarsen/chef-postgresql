@@ -79,7 +79,7 @@ setup_items.each do |setup|
       if user['superuser']
         "sudo -u postgres createuser -s #{user['username']};"
       else
-        "sudo -u postgres createuser #{user['username']};"
+        "sudo -u postgres createuser -S #{user['username']};"
       end
     end
 
